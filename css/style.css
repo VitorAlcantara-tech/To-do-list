@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url('./img/background.jpg');
+    background-image: url('https://vitoralcantara-tech.github.io/To-do-list/img/background.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed; /* optional: makes background stay fixed when scrolling */
