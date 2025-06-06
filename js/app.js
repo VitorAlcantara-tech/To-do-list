@@ -6,6 +6,8 @@ const editForm = document.querySelector('#edit__form');
 const editInput = document.querySelector('#edit__input');
 const cancelEditBtn = document.querySelector('#cancel__edit__btn');
 const filtrar = document.getElementById("filter__select");
+const searchInput = document.getElementById('search__input');
+const eraseBtn = document.getElementById('erase__btn');
 
 let oldInputValue;
 //Funções
@@ -55,6 +57,7 @@ const updateTodo = (text) =>{
         }
     });
 };
+
 
 // Eventos
 todoForm.addEventListener("submit", (e) =>{
@@ -117,10 +120,10 @@ filtrar.addEventListener('change', (e) =>{
     let todos = document.querySelectorAll("#todo__list .todo");
     
      todos.forEach(todo => {
-        // Mostrar ou esconder de acordo com o filtro
+        
         switch (optionValue) {
             case 'all':
-                todo.style.display = 'flex'; // ou 'block', conforme seu layout
+                todo.style.display = 'flex';
                 break;
             case 'done':
                 if (todo.classList.contains('done')) {
@@ -139,3 +142,28 @@ filtrar.addEventListener('change', (e) =>{
         }
     });
 });
+
+searchInput.addEventListener('input', (e) =>{
+    e.preventDefault();
+
+    const searchText = searchInput.value.toLowerCase();
+    const todos = document.querySelectorAll('#todo__list .todo');
+
+    todos.forEach(todo => {
+        const todoTitle = todo.querySelector('h3').innerText.toLowerCase();
+
+        if (todoTitle.includes(searchText)){
+            todo.style.display = 'flex';
+        } else {
+            todo.style.display = 'none';
+        }
+    });
+});
+
+eraseBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+})
