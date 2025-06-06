@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FIM FONT AWESOME -->
+
+</head>
+
+<body>
+    <div class="todo__container">
+
+
+        <header>
+            <h1>To-do List</h1>
+        </header>
+
+
+        <form id="todo__form">
+            <p>Adicione a sua tarefa:</p>
+            <div class="form__control">
+                <input type="text" id="todo__input" placeholder="O que você vai fazer?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
+
+        <form id="edit__form" class="hide">
+            <p>Edite a sua tarefa:</p>
+            <div class="form__control">
+                <input type="text" id="edit__input">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double "></i>
+                </button>
+            </div>
+            <button id="cancel__edit__btn">Cancelar</button>
+        </form>
+
+
+        <div id="toolbar"><!--toolbar-->
+
+            <div id="search"><!--search-->
+                <h4>Pesquisar</h4>
+                <form>
+                    <input type="text" id="search__input" placeholder="Buscar">
+                    <button id="erase__btn">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div><!--FIM search-->
+
+
+            <div id="filter"><!--filter-->
+                <h4>Filtrar</h4>
+                <select id="filter__select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div><!--FIM filter-->
+        </div> <!--FIM toolbar-->
+
+
+        <div id="todo__list">
+            <div class="todo done">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <button class="finish__todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit__todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove__todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+
+            <div class="todo">
+                <h3>Estudar JavaScript</h3>
+                <button class="finish__todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit__todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove__todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
