@@ -21,6 +21,8 @@ Um projeto simples de **To-do List** feito com **HTML**, **CSS** e **JavaScript*
 - JavaScript (Vanilla JS)
 - Font Awesome (ícones)
 
+## 🔗 Confira o projeto 
+Acesse aqui: https://lnkd.in/dbyD5RUe
 
 
 ## Desenvolvido por Vitor Alcantara 🚀
